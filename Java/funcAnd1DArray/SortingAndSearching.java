@@ -2,31 +2,15 @@ package funcAnd1DArray;
 
 import java.util.Scanner;
 
-public class ArrayOps {
+public class SortingAndSearching {
 
 	static Scanner scn = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
 		int[] array = { 99, 77, 88, 66, 55 };
-		insertion(array);
+		insertionSort(array);
 		display(array);
-
-	}
-
-	public static int[] takeInput() {
-
-		System.out.println("Size?: ");
-		int n = scn.nextInt();
-
-		int[] arr = new int[n];
-
-		for (int i = 0; i < n; i++) {
-			System.out.println("Enter the value at " + i + " index: ");
-			arr[i] = scn.nextInt();
-		}
-
-		return arr;
 
 	}
 
@@ -75,7 +59,7 @@ public class ArrayOps {
 		return -1;
 	}
 
-	public static void bubble(int[] arr) {
+	public static void bubbleSort(int[] arr) {
 
 		for (int i = 0; i < arr.length - 1; i++) {
 			for (int j = 0; j < arr.length - 1 - i; j++) {
@@ -89,7 +73,7 @@ public class ArrayOps {
 
 	}
 
-	public static void selection(int[] arr) {
+	public static void selectionSort(int[] arr) {
 
 		for (int i = 0; i < arr.length - 1; i++) {
 			int min = i;
@@ -105,7 +89,7 @@ public class ArrayOps {
 
 	}
 
-	public static void insertion(int[] arr) {
+	public static void insertionSort(int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
 			int val = arr[i], j;
 			for (j = i - 1; j >= 0 && arr[j] > val; j--) {
